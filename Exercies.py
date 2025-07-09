@@ -20,3 +20,5 @@ print("Number of kids:",num_kids)
 print("Has pet:",has_pet)
 
 #Task 2: Reassigning Variables
+age=37 #Happy birthday
+print("\nNew Age after birthday:",age)
