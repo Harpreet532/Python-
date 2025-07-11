@@ -49,3 +49,113 @@ print("\n"+greeting)
 #Task 5: Create a sentence introducing yourself using your variables and print it
 my_intro = f"My name is {name}, I am {age} year old, and I live in {city}."
 print(my_intro)
+
+
+#
+#Create a List
+fruits=["apple","banana","cherry","mango"]
+print("initial list:",fruits)
+
+#Task 1:Add orange to the list and print the updated list
+fruits.append("orange")
+print("After adding 'orange':",fruits)
+
+#Accessing List Elements
+print("First fruit:",fruits[0]) #index starts at 0
+print("Last fruit:",fruits[-1]) #negative index starts from end
+
+#Task 2:Print the second and third fruits using slicing
+print("Second and third fruits:",fruits[1:3])
+
+#Modifying Elements
+fruits[1]="blueberry" #changing banana to blueberry
+print("After modification:",fruits)
+
+#Task 3:Change "cherry" to "pineapple"
+index_cherry=fruits.index("cherry")
+fruits[index_cherry]="pineapple"
+print("After changing 'cherry' to 'pineapple':",fruits)
+
+#Task 4: Add "lemon" at the begining of the list
+fruits.insert(0,"lemon")
+print("After adding 'lemon' at beginning:",fruits)
+
+#Removing Items
+fruits.remove("apple") #Remove first occurence of apple
+popped_fruit=fruits.pop #Remove last item
+print("After removing 'apple' and poping the last item:",fruits)
+print("Popped fruit:",popped_fruit)
+
+#Task 5: Remove "mango" and print the list
+fruits.remove("mango")
+print("After removing 'mango':",fruits)
+
+#Sorting and Reversing
+fruits.sort()
+print("Sorted list:",fruits)
+
+fruits.reverse()
+print("Reversed list:",fruits)
+
+#Task 6:Sort in reverse alphabetical order without changing origin
+sorted_reversed=sorted(fruits,reverse=True)
+print("Reverse-sorted (new list):",sorted_reversed)
+print("Original list remains:",fruits)
+
+#Iterating Over a List
+print("Fruits one by one:")
+for fruit in fruits:
+    print("Fruit:",fruit)
+
+#Task 7: Print each fruit in uppercase
+print("Fruits in uppercase:")
+for fruit in fruits:
+    print(fruit.upper())
+
+#List Comprehension
+fruit_lengths=[len(fruit) for fruit in fruits]
+print("Lengths of each fruit name:",fruit_lengths)
+
+#Task 8: New list with fruits containing the letter 'e'
+fruits_with_e=[fruit for fruit in fruits if 'e' in fruit]
+print("Fruits with 'e':",fruits_with_e)
+
+#  Creating a List of Lists (2D List)
+# Let's say we have student scores for 3 students in 3 subjects
+scores=[
+    [85,92,78],
+    [76,88,90],
+    [90,91,95]
+]
+print("Initial scores:",scores)
+
+#Accessing Elements
+print("Score of Student 1 in Subject 2:",scores[0][1])
+
+#Iterating through a List of Lists
+print("All scores row by row:")
+for student_scores in scores:
+    print(student_scores)
+
+# Task 2: Print each individual score in a tabular format
+print("Individual scores:")
+for i,student_scores in enumerate(scores):
+    for j, score in enumerate(student_scores):
+        print(f"Student{i+1},Subject{j+1}:{score}")
+
+#Adding a New Student's Scores
+scores.append([88,79,85])
+print("After adding Student 4:",scores)
+
+# Task 3: Add another student with scores [70, 80, 90]
+scores.append([70,80,90])
+print("After adding Student 5:",scores)
+
+#Updating a Value
+#Let's update Student 2's score in Subject 1 to 95
+scores[1][0]=95
+print("After updating Student 2's Subject 1 scores:", scores)
+
+
+
+
