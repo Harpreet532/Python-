@@ -156,6 +156,24 @@ print("After adding Student 5:",scores)
 scores[1][0]=95
 print("After updating Student 2's Subject 1 scores:", scores)
 
+#Task 4: Change Student 5's Subject 2 score to 82
+scores[4][1]=82
+print("After updating Student 5's Subject 2 score:",scores)
+
+# Calculating Averages
+print("Average scores per student:")
+for i,student_scores in enumerate(scores):
+    avg=sum(student_scores)/len(student_scores)
+    print(f"student{i+1} average:{round(avg,2)}")
+
+# Task 5: Print subject-wise average (column-wise average)
+print("Average score per subject:")
+num_subjects=len(scores)
+num_students=len(scores)
+
+#  1. len() - Get the length of a list, string, or other iterable
+fruits=["apple","banana","cherry"]
+print("Length of the list",len(fruits))
 
 
 
