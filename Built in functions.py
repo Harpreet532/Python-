@@ -64,4 +64,3 @@ print("Absolute of -12.5:", abs(-12.5))
 name = input("Enter your name: ")
 print("Hello,", name)
 
-help(len)
